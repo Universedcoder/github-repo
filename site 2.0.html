@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagrik Aur Samvidhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1c3d5a;
+            --secondary-color: #e8b339;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .tagline {
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        .welcome-message {
+            text-align: center;
+            padding: 40px 0;
+            background-color: white;
+            margin-top: 20px;
+            border-top: 4px solid var(--secondary-color);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #content {
+            background-color: white;
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .language-selector,
+        .accessibility-controls {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d1a02f;
+        }
+
+        .high-contrast {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --text-color: #ffffff;
+            --bg-color: #000000;
+            --card-bg: #333333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nagrik Aur Samvidhan</h1>
+            <p class="tagline">Empowering Citizens through Constitutional Literacy</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('introduction')">Introduction</a></li>
+            <li><a href="#" onclick="loadContent('fundamental-rights')">Fundamental Rights</a></li>
+            <li><a href="#" onclick="loadContent('directive-principles')">Directive Principles</a></li>
+            <li><a href="#" onclick="loadContent('fundamental-duties')">Fundamental Duties</a></li>
+            <li><a href="#" onclick="loadContent('games')">Games</a></li>
+            <li><a href="#" onclick="loadContent('multimedia')">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" role="main">
+        <div class="welcome-message">
+            <h2>Welcome to Nagrik Aur Samvidhan</h2>
+            <p id="welcome-message">Explore the Constitution of India through interactive learning experiences, games, and multimedia content.</p>
+        </div>
+
+        <div class="feature-grid">
+            <a href="https://palevioletred-donkey-215356.hostingersite.com/?preview_id=576&preview_nonce=f17b936949&preview=true#" class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3 id="feature1-title">Learn the Basics</h3>
+                <p id="feature1-desc">Understand the fundamental principles of the Indian Constitution through simplified explanations and visuals.</p>
+            </a>
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3 id="feature2-title">Play and Learn</h3>
+                <p id="feature2-desc">Engage with fun games and quizzes to test your knowledge of constitutional concepts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎥</div>
+                <h3 id="feature3-title">Multimedia Experience</h3>
+                <p id="feature3-desc">Watch videos and animations that bring constitutional topics to life.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 id="feature4-title">Multilingual Content</h3>
+                <p id="feature4-desc">Access content in multiple Indian languages to enhance understanding and inclusivity.</p>
+            </div>
+        </div>
+
+        <div id="content">
+            <!-- Content will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Nagrik Aur Samvidhan. All rights reserved.</p>
+            
+            <div class="language-selector">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('hi')">हिंदी</button>
+                <button onclick="changeLanguage('bn')">বাংলা</button>
+                <button onclick="changeLanguage('ta')">தமிழ்</button>
+                <button onclick="changeLanguage('te')">తెలుగు</button>
+            </div>
+
+            <div class="accessibility-controls">
+                <button onclick="toggleHighContrast()">High Contrast</button>
+                <button onclick="changeFontSize(1)">A+</button>
+                <button onclick="changeFontSize(-1)">A-</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const content = {
+            en: {
+                welcome: "Explore the Constitution of India through interactive learning experiences, games, and multimedia content.",
+                feature1Title: "Learn the Basics",
+                feature1Desc: "Understand the fundamental principles of the Indian Constitution through simplified explanations and visuals.",
+                feature2Title: "Play and Learn",
+                feature2Desc: "Engage with fun games and quizzes to test your knowledge of constitutional concepts.",
+                feature3Title: "Multimedia Experience",
+                feature3Desc: "Watch videos and animations that bring constitutional topics to life.",
+                feature4Title: "Multilingual Content",
+                feature4Desc: "Access content in multiple Indian languages to enhance understanding and inclusivity.",
+                intro: "The Constitution of India is the supreme law of India. It lays down the framework defining fundamental political principles, establishes the structure, procedures, powers and duties of government institutions and sets out fundamental rights, directive principles and the duties of citizens.",
+                fundamentalRights: "Fundamental Rights are the basic human rights enshrined in the Constitution of India which are guaranteed to all citizens. They are defined in Part III of the Constitution and are enforceable by the courts, subject to specific restrictions.",
+                directivePrinciples: "The Directive Principles of State Policy are guidelines for the framing of laws by the government. These provisions, set out in Part IV of the Constitution, are not enforceable by the courts, but the principles laid down therein are fundamental in the governance of the country.",
+                fundamentalDuties: "Fundamental Duties are defined as the moral obligations of all citizens to help promote a spirit of patriotism and to uphold the unity of India. These duties, set out in Part IVA of the Constitution, were added by the 42nd Amendment Act, 1976.",
+                games: "Test your knowledge of the Constitution through engaging quizzes and interactive games. Challenge yourself and see how much you know!",
+                multimedia: "Explore a variety of videos and animations that explain key constitutional concepts in a fun and engaging way."
+            },
+            hi: {
+                welcome: "भारत के संविधान को इंटरएक्टिव लर्निंग अनुभवों, खेलों और मल्टीमीडिया सामग्री के माध्यम से खोजें।",
+                feature1Title: "आध básicos",
+                feature1Desc: "भारतीय संविधान के मौलिक सिद्धांतों को सरल स्पष्टीकरण और दृश्य के माध्यम से समझें।",
+                feature2Title: "खेल और सीखें",
+                feature2Desc: "संवैधानिक अवधारणाओं के ज्ञान को जांचने के लिए मजेदार खेलों और क्विज़ के साथ जुड़ें।",
+                feature3Title: "मल्टीमीडिया अनुभव",
+                feature3Desc: "वीडियो और एनिमेशन देखें जो संवैधानिक विषयों को जीवन में लाते हैं।",
+                feature4Title: "बहुभाषी सामग्री",
+                feature4Desc: "समझ और समावेशिता बढ़ाने के लिए कई भारतीय भाषाओं में सामग्री तक पहुँचें।",
+                intro: "भारत का संविधान भारत का सर्वोच्च कानून है। यह मौलिक राजनीतिक सिद्धांतों को परिभाषित करने वाला ढांचा तैयार करता है, सरकार की संस्थाओं की संरचना, प्रक्रियाएँ, शक्तियाँ और कर्तव्यों को स्थापित करता है और नागरिकों के मौलिक अधिकारों, निदेशक सिद्धांतों और कर्तव्यों को सेट करता है।",
+                fundamentalRights: "मौलिक अधिकार भारतीय संविधान में निहित बुनियादी मानव अधिकार हैं जो सभी नागरिकों को गारंटीकृत हैं। ये संविधान के भाग III में परिभाषित हैं और अदालतों द्वारा लागू किए जा सकते हैं, विशिष्ट प्रतिबंधों के अधीन।",
+                directivePrinciples: "राज्य नीति के निदेशक सिद्धांत सरकार द्वारा कानूनों की रूपरेखा के लिए दिशानिर्देश हैं। ये प्रावधान, जो संविधान के भाग IV में निर्धारित किए गए हैं, अदालतों द्वारा लागू नहीं किए जा सकते, लेकिन इनमें निहित सिद्धांत देश के प्रशासन में मौलिक हैं।",
+                fundamentalDuties: "मौलिक कर्तव्य सभी नागरिकों के नैतिक दायित्वों के रूप में परिभाषित किए जाते हैं ताकि देशभक्ति की भावना को बढ़ावा देने में मदद मिल सके और भारत की एकता को बनाए रखा जा सके। ये कर्तव्य, जो संविधान के भाग IVA में निर्धारित हैं, 42वीं संशोधन अधिनियम, 1976 द्वारा जोड़े गए थे।",
+                games: "संविधान के बारे में अपने ज्ञान का परीक्षण करने के लिए आकर्षक क्विज़ और इंटरएक्टिव खेलों के साथ चुनौती लें। देखिए आप कितना जानते हैं!",
+                multimedia: "वीडियो और एनिमेशन की एक श्रृंखला खोजें जो संवैधानिक अवधारणाओं को मजेदार और आकर्षक तरीके से समझाती है।"
+            },
+            // Add similar objects for 'bn', 'ta', and 'te' languages
+        };
+
+        function loadContent(section) {
+            const contentDiv = document.getElementById('content');
+            const lang = document.body.getAttribute('data-lang') || 'en'; // default to English
+
+            switch(section) {
+                case 'introduction':
+                    contentDiv.innerHTML = `<h2>Introduction</h2><p>${content[lang].intro}</p>`;
+                    break;
+                case 'fundamental-rights':
+                    contentDiv.innerHTML = `<h2>Fundamental Rights</h2><p>${content[lang].fundamentalRights}</p>`;
+                    break;
+                case 'directive-principles':
+                    contentDiv.innerHTML = `<h2>Directive Principles</h2><p>${content[lang].directivePrinciples}</p>`;
+                    break;
+                case 'fundamental-duties':
+                    contentDiv.innerHTML = `<h2>Fundamental Duties</h2><p>${content[lang].fundamentalDuties}</p>`;
+                    break;
+                case 'games':
+                    contentDiv.innerHTML = `<h2>Games</h2><p>${content[lang].games}</p>`;
+                    break;
+                case 'multimedia':
+                    contentDiv.innerHTML = `<h2>Multimedia</h2><p>${content[lang].multimedia}</p>`;
+                    break;
+                default:
+                    contentDiv.innerHTML = `<h2>Welcome</h2><p>${content[lang].welcome}</p>`;
+            }
+            
+            // Update feature cards
+            document.getElementById('feature1-title').textContent = content[lang].feature1Title;
+            document.getElementById('feature1-desc').textContent = content[lang].feature1Desc;
+            document.getElementById('feature2-title').textContent = content[lang].feature2Title;
+            document.getElementById('feature2-desc').textContent = content[lang].feature2Desc;
+            document.getElementById('feature3-title').textContent = content[lang].feature3Title;
+            document.getElementById('feature3-desc').textContent = content[lang].feature3Desc;
+            document.getElementById('feature4-title').textContent = content[lang].feature4Title;
+            document.getElementById('feature4-desc').textContent = content[lang].feature4Desc;
+            document.getElementById('welcome-message').textContent = content[lang].welcome;
+        }
+
+        function changeLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            loadContent('introduction'); // Reload content to reflect the new language
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        function changeFontSize(sizeChange) {
+            document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) + sizeChange) + 'px';
+        }
+
+        window.onload = function() {
+            loadContent('introduction');
+        }
+    </script>
+</body>
+</html>
